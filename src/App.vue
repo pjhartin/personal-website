@@ -39,6 +39,6 @@ body {
 
 .router-container {
   position: relative;
-  margin: 2rem;
+  margin: 12rem;
 }
 </style>
