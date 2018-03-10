@@ -1,7 +1,7 @@
 <template lang="pug">
   .welcome
     h1 Phillip Hartin
-    p I've been researching and building stuff, for way too long. So long in fact, that I haven't had a chance to build my own site. But things are about to change.
+    p I've been researching and building stuff, for quite some time now. I've been pretty busy with all the work. So busy in fact, that I haven't had a chance to build my own site. Good news is, I'm working on it.
 </template>
 
 <script>
