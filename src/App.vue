@@ -29,7 +29,7 @@ body {
 #app {
   height: 100%;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  background: $color2;
+  background: $color4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;

@@ -7,6 +7,7 @@
     .links
       a.external-link(href="mailto:contact@philliphartin.com", target="_blank") Email.
       a.external-link(href="https://github.com/pjhartin", target="_blank") Github.
+      a.external-link(href="https://medium.com/@philliphartin", target="_blank") Medium.
       a.external-link(href="https://twitter.com/philliphartin", target="_blank") Twitter.
       a.external-link(href="https://www.linkedin.com/in/philliphartin/", target="_blank") LinkedIn.
 
