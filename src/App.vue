@@ -37,7 +37,7 @@ body {
   background: $purple;
   display: block;
   height: 100%;
-  background-image: url("assets/images/background.jpg");
+  background-image: url("/static/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

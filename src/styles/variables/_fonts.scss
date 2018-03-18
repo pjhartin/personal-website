@@ -1,15 +1,10 @@
 @font-face {
   font-family: "RoadRage";
-  src: url("../assets/fonts/RoadRage.eot?#iefix") format("embedded-opentype"),
-    url("../assets/fonts/RoadRage.otf") format("opentype"),
-    url("../assets/fonts/RoadRage.woff") format("woff"),
-    url("../assets/fonts/RoadRage.ttf") format("truetype"),
-    url("../assets/fonts/RoadRage.svg#RoadRage") format("svg");
+  src: url("/static/fonts/RoadRage.woff") format("woff"),
+    url("/static/fonts/RoadRage.otf") format("opentype"),
+    url("/static/fonts/RoadRage.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
 }
 
-$font-permanent: "Permanent Marker", cursive;
-$font-salt: "Rock Salt", cursive;
-$font-cabin: "Cabin", sans-serif;
 $font-roadrage: "RoadRage", sans-serif;
