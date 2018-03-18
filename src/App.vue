@@ -11,7 +11,7 @@
         a.external-link(href="https://www.linkedin.com/in/philliphartin/", target="_blank",title="Linkedin")
           i.fab.fa-linkedin-in
         a.external-link(href="mailto:contact@philliphartin.com", target="_blank", title="Email")
-          i.fal.fa-envelope
+          i.fas.fa-envelope
     .content
       .router-container
         router-view
@@ -76,6 +76,10 @@ body {
   align-items: center;
   justify-content: flex-end;
   margin: 0 2rem;
+
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
 
   .external-link {
     color: $purple;
