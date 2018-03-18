@@ -1,9 +1,7 @@
 <template lang="pug">
   
   .welcome
-
     .content
-      
       .title
         .letters
           .row
@@ -27,8 +25,6 @@ export default {
   data() {
     return {
       applyStyleToTagline: function() {
-        console.log("Apply style to tagline");
-
         let letters = [];
 
         // Get each letter in the tagline
@@ -68,10 +64,6 @@ export default {
 .welcome {
   color: white;
 
-  .content {
-    // padding: 0 12rem;
-  }
-
   .title {
     position: relative;
     text-align: center;
@@ -80,11 +72,10 @@ export default {
   }
 
   .letters {
-    // font-family: $font-cabin;
     font-family: "Work Sans";
 
     font-size: 9rem;
-    color: black;
+    color: $black;
     font-weight: 700;
 
     .row {
@@ -104,7 +95,6 @@ export default {
 
     .letter {
       flex: 1;
-
       &.offset {
         transform: translateY(10%);
       }
@@ -131,7 +121,6 @@ export default {
   .new {
     &:nth-of-type(odd) {
       font-size: 3.3rem;
-      // transform: scale(2);
     }
   }
 }
