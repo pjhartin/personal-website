@@ -121,6 +121,7 @@ body {
   #app {
     opacity: 1;
     animation: fade-in 2s;
+    min-height: 100vh;
   }
 }
 
@@ -174,9 +175,8 @@ body {
 
 .splash {
   position: absolute;
-  top: 0;
+  height: 100vh;
   left: 0;
-  bottom: 0;
   right: 0;
   z-index: 0;
   background-repeat: no-repeat;
@@ -204,6 +204,7 @@ body {
   flex: 1;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .router-container {
   position: relative;
