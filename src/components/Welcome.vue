@@ -14,7 +14,7 @@
           .row
             span.letter N
 
-        #tagline.tagline Building tech for the web and mobile
+        //- #tagline.tagline Building tech for the web and mobile
         //-p I've been researching and building stuff, for quite some time now. I've been pretty busy with all the work. So busy in fact, that I haven't had a chance to build my own site. Good news is, I'm working on it.
 
 </template>
@@ -29,24 +29,25 @@ export default {
 
         // Get each letter in the tagline
         let tagline = document.getElementById("tagline");
+        if (tagline) {
+          // Fetch each letter
+          for (var i = 0; i < tagline.innerHTML.length; i++) {
+            let letter = tagline.innerHTML.charAt(i);
+            letters.push(letter);
+          }
 
-        // Fetch each letter
-        for (var i = 0; i < tagline.innerHTML.length; i++) {
-          let letter = tagline.innerHTML.charAt(i);
-          letters.push(letter);
+          // Delete existing letters
+          tagline.innerHTML = "";
+
+          // Redraw each letter as a span
+          letters.forEach(function(letter) {
+            let span = document.createElement("span");
+            span.innerHTML = letter;
+            span.className = "new";
+
+            tagline.appendChild(span);
+          });
         }
-
-        // Delete existing letters
-        tagline.innerHTML = "";
-
-        // Redraw each letter as a span
-        letters.forEach(function(letter) {
-          let span = document.createElement("span");
-          span.innerHTML = letter;
-          span.className = "new";
-
-          tagline.appendChild(span);
-        });
       }
     };
   },
@@ -74,9 +75,10 @@ export default {
   .letters {
     font-family: "Work Sans";
 
-    font-size: 9rem;
+    font-size: 12rem;
     color: $black;
     font-weight: 700;
+    transition: all 120ms ease-in;
 
     .row {
       margin: -0.1em 0rem;
@@ -95,6 +97,9 @@ export default {
 
     .letter {
       flex: 1;
+      /*mix-blend-mode: color;*/
+      opacity: 0.8;
+
       &.offset {
         transform: translateY(10%);
       }

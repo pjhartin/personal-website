@@ -1,24 +1,61 @@
 <template lang="pug">
-  #app
+  #app(:class="hoverClass")
     .splash(v-lazy:background-image="'/static/images/background.jpg'")
     .top-nav
       .links
-        a.external-link(href="https://medium.com/@philliphartin", target="_blank", title="Medium") 
-          i.fab.fa-medium-m
-        a.external-link(href="https://github.com/pjhartin", target="_blank", title="Github")
-          i.fab.fa-github
-        a.external-link(href="https://www.linkedin.com/in/philliphartin/", target="_blank", title="LinkedIn")
-          i.fab.fa-linkedin-in
-        a.external-link(href="mailto:contact@philliphartin.com", target="_blank", title="Email")
-          i.fas.fa-envelope
+        a.external-link(v-for="link in links", :href="link.href", target="_blank", :title="link.title", v-on:mouseover="setHover(link)" v-on:mouseleave="setHover()")
+          i.fab(:class="link.icon")
+
     .content
       .router-container
         router-view
+
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data() {
+    return {
+      hoveredElement: "none",
+      links: [
+        {
+          title: "Medium",
+          href: "https://medium.com/@philliphartin",
+          icon: "fab fa-medium-m"
+        },
+        {
+          title: "Github",
+          href: "https://github.com/pjhartin",
+          icon: "fab fa-github"
+        },
+        {
+          title: "LinkedIn",
+          href: "https://www.linkedin.com/in/philliphartin/",
+          icon: "fab fa-linkedin-in"
+        },
+        {
+          title: "Email",
+          href: "mailto:contact@philliphartin.com",
+          icon: "fas fa-envelope"
+        }
+      ]
+    };
+  },
+  methods: {
+    setHover(link) {
+      this.hoveredElement = link;
+    }
+  },
+  computed: {
+    hoverClass() {
+      if (this.hoveredElement && this.hoveredElement.title) {
+        return "hover-" + this.hoveredElement.title.toLowerCase();
+      } else {
+        return "hover-none";
+      }
+    }
+  }
 };
 </script>
 
@@ -103,6 +140,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
+
+  &.hover-none {
+    .letters {
+      color: $black;
+    }
+  }
+
+  &.hover-linkedin {
+    .letters {
+      color: purple;
+    }
+  }
+
+  &.hover-github {
+    .letters {
+      color: white;
+    }
+  }
+
+  &.hover-medium {
+    .letters {
+      color: #42b983;
+    }
+  }
+
+  &.hover-email {
+    .letters {
+      color: navy;
+    }
+  }
 }
 
 .splash {
