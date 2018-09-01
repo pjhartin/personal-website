@@ -1,5 +1,6 @@
 <template lang="pug">
   #app
+    .splash(v-lazy:background-image="'/static/images/background.jpg'")
     .top-nav
       .links
         a.external-link(href="https://medium.com/@philliphartin", target="_blank", title="Medium") 
@@ -102,11 +103,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
-  background-image: url("/static/images/background.jpg");
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  opacity: 0;
+
+  transition: opacity 1s ease-in;
+
+  &[lazy="loaded"] {
+    opacity: 1;
+  }
 }
 
 .top-nav {
