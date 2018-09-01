@@ -14,8 +14,12 @@
           .row
             span.letter N
 
-        //- #tagline.tagline Building tech for the web and mobile
-        //-p I've been researching and building stuff, for quite some time now. I've been pretty busy with all the work. So busy in fact, that I haven't had a chance to build my own site. Good news is, I'm working on it.
+        //- #tagline.tagline Building products for the web and mobile
+        p.disclaimer
+          | I've been researching and coding tech for quite some time now. I've been pretty busy with all the work, so busy in fact, that I haven't had a chance to build my own site. So here's a distracting image of me surfing.
+          | #[br]
+          | #[br]
+          | New site coming soon.
 
 </template>
 
@@ -72,10 +76,17 @@ export default {
     width: 100%;
   }
 
+  .disclaimer {
+    margin-top: 6rem;
+    font-size: 1rem;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-family: "Muli";
+  }
+
   .letters {
     font-family: "Work Sans";
-
-    font-size: 12rem;
+    font-size: 9rem;
     color: $black;
     font-weight: 700;
     transition: all 120ms ease-in;
@@ -101,7 +112,7 @@ export default {
       opacity: 0.8;
 
       &.offset {
-        transform: translateY(10%);
+        transform: translateY(15%);
       }
     }
   }

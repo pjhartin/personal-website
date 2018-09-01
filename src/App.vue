@@ -196,6 +196,7 @@ body {
   position: relative;
   height: 80px;
   display: flex;
+  z-index: 1000;
 }
 
 .content {
