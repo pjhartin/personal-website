@@ -5,14 +5,14 @@
       .title
         .letters
           .row
-            .letter H
-            .letter.offset A
-            .letter R
+            span.letter H
+            span.letter.offset A
+            span.letter R
           .row
-            .letter T
-            .letter I
+            span.letter T
+            span.letter I
           .row
-            .letter N
+            span.letter N
 
         #tagline.tagline Building tech for the web and mobile
         //-p I've been researching and building stuff, for quite some time now. I've been pretty busy with all the work. So busy in fact, that I haven't had a chance to build my own site. Good news is, I'm working on it.

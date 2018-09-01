@@ -6,9 +6,7 @@
           i.fab.fa-medium-m
         a.external-link(href="https://github.com/pjhartin", target="_blank", title="Github")
           i.fab.fa-github
-        a.external-link(href="https://twitter.com/philliphartin", target="_blank", title="Twitter")
-          i.fab.fa-twitter
-        a.external-link(href="https://www.linkedin.com/in/philliphartin/", target="_blank",title="Linkedin")
+        a.external-link(href="https://www.linkedin.com/in/philliphartin/", target="_blank", title="LinkedIn")
           i.fab.fa-linkedin-in
         a.external-link(href="mailto:contact@philliphartin.com", target="_blank", title="Email")
           i.fas.fa-envelope
@@ -29,6 +27,50 @@ export default {
 html {
   display: block;
   height: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  i,
+  span {
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+  }
+
+  &.wf-loading {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    i,
+    span {
+      opacity: 0;
+    }
+  }
+
+  &.wf-active {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    i,
+    span {
+      opacity: 1;
+    }
+  }
 }
 
 body {
@@ -37,11 +79,20 @@ body {
   background: $purple;
   display: block;
   height: 100%;
-  background-image: url("/static/images/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+
+  #app {
+    opacity: 1;
+    animation: fade-in 2s;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 #app {
@@ -51,6 +102,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
+  background-image: url("/static/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .top-nav {
@@ -82,14 +138,14 @@ body {
   }
 
   .external-link {
-    color: $purple;
+    color: white;
     transition: all 350ms ease-in-out;
     padding: 0.5rem;
     font-size: 1rem;
 
     &:hover {
       transform: scale(1.3) translateY(-5%);
-      color: white;
+      color: $purple;
     }
   }
 }
