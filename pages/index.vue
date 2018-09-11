@@ -6,7 +6,7 @@
     </div>
 
     <!-- Shapes -->
-    <div class="shapes absolute pin z-minus">
+    <div class="shapes absolute pin overflow-hidden z-minus">
       <div class="shape square">
       </div>
       <div class="shape triangle"></div>
