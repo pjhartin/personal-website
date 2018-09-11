@@ -1,65 +1,87 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        personal-website
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+  <section class="h-screen w-screen flex content-center justify-center">
+    <!-- Title -->
+    <div class="title self-center z-10">
+      <h1 class="text-5xl">Phillip Hartin<span class="text-xl">, PhD</span></h1>
     </div>
+    <!-- Shapes -->
+    <div class="shapes absolute pin z-minus">
+      <div class="shape square">
+      </div>
+      <div class="shape triangle"></div>
+      <div class="shape circle"></div>
+     
+    </div>
+
   </section>
+
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
-export default {
-  components: {
-    AppLogo
-  }
-}
+export default {};
 </script>
 
 <style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.shape {
+  position: absolute;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+  width: 350px;
+  height: 350px;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.square {
+  background: #fcd5ff;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.triangle {
+  transform: translate(-50%, -50%);
+  background: #e5f2ff;
+  animation: travelOne 2s infinite alternate linear;
 }
 
-.links {
-  padding-top: 15px;
+.circle {
+  transform: translate(-50%, -50%);
+  background: #ff8282;
+  animation: travelTwo 4s infinite alternate linear;
+}
+
+@keyframes travelOne {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-25%, -25%);
+  }
+  50% {
+    transform: translate(-25%, -75%);
+  }
+  75% {
+    transform: translate(-75%, -75%);
+  }
+  100% {
+    transform: translate(-75%, -25%);
+  }
+}
+
+@keyframes travelTwo {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  25% {
+    transform: translate(-75%, -75%);
+  }
+  50% {
+    transform: translate(-75%, -75%);
+  }
+  75% {
+    transform: translate(-25%, -25%);
+  }
+  100% {
+    transform: translate(-25%, -75%);
+  }
 }
 </style>
-
