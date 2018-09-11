@@ -1,9 +1,10 @@
 <template>
-  <section class="h-screen w-screen flex content-center justify-center">
+  <section class="h-screen w-screen flex content-center justify-center font-serif">
     <!-- Title -->
     <div class="title self-center z-10">
-      <h1 class="text-5xl">Phillip Hartin<span class="text-xl">, PhD</span></h1>
+      <h1 class="text-5xl font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
     </div>
+
     <!-- Shapes -->
     <div class="shapes absolute pin z-minus">
       <div class="shape square">
@@ -13,12 +14,20 @@
      
     </div>
 
+    <nav class="fixed w-screen h-screen">
+      <nuxt-link to="/" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-b pin-l pl-12 pb-8 uppercase">Home</nuxt-link>
+      <nuxt-link to="/work" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-t pin-l pl-12 pt-8 uppercase">Work</nuxt-link>
+      <nuxt-link to="/research" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-t pin-r pr-12 pt-8 uppercase">Research</nuxt-link>
+      <nuxt-link to="/contact" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-b pin-r pr-12 pb-8 uppercase">Contact</nuxt-link>
+    </nav>
+
   </section>
 
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style>
@@ -38,50 +47,16 @@ export default {};
 }
 
 .triangle {
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -25%);
   background: #e5f2ff;
   animation: travelOne 2s infinite alternate linear;
 }
 
 .circle {
-  transform: translate(-50%, -50%);
+  transform: translate(-75%, -75%);
   background: #ff8282;
   animation: travelTwo 4s infinite alternate linear;
 }
 
-@keyframes travelOne {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-25%, -25%);
-  }
-  50% {
-    transform: translate(-25%, -75%);
-  }
-  75% {
-    transform: translate(-75%, -75%);
-  }
-  100% {
-    transform: translate(-75%, -25%);
-  }
-}
 
-@keyframes travelTwo {
-  0% {
-    transform: translate(-50%, -50%);
-  }
-  25% {
-    transform: translate(-75%, -75%);
-  }
-  50% {
-    transform: translate(-75%, -75%);
-  }
-  75% {
-    transform: translate(-25%, -25%);
-  }
-  100% {
-    transform: translate(-25%, -75%);
-  }
-}
 </style>

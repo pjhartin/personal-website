@@ -4,6 +4,24 @@
   </div>
 </template>
 
+<script>
+  export default {
+
+    head(){
+      return {
+          title: 'Phillip Hartin', // set a title
+          htmlAttrs: {
+            lang: 'en',
+          },
+        link: [
+          {rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display"}
+        ]
+        }
+    }
+
+  };
+</script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
