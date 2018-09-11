@@ -15,10 +15,10 @@
     </div>
 
     <nav class="fixed w-screen h-screen">
-      <nuxt-link to="/" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-b pin-l pl-12 pb-8 uppercase">Home</nuxt-link>
-      <nuxt-link to="/work" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-t pin-l pl-12 pt-8 uppercase">Work</nuxt-link>
-      <nuxt-link to="/research" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-t pin-r pr-12 pt-8 uppercase">Research</nuxt-link>
-      <nuxt-link to="/contact" class="text-grey hover:text-grey-darkest font-normal font-sans text-sm tracking-wide no-underline absolute pin-b pin-r pr-12 pb-8 uppercase">Contact</nuxt-link>
+      <nuxt-link to="/" class="text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline absolute pin-b pin-l md:pl-12 pl-8 pb-8 uppercase">Home</nuxt-link>
+      <nuxt-link to="/work" class="text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline absolute pin-t pin-l md:pl-12 pl-8 pt-8 uppercase">Work</nuxt-link>
+      <nuxt-link to="/research" class="text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline absolute pin-t pin-r md:pr-12 pr-8 pt-8 uppercase">Research</nuxt-link>
+      <nuxt-link to="/contact" class="text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline absolute pin-b pin-r md:pr-12 pr-8 pb-8 uppercase">Contact</nuxt-link>
     </nav>
 
   </section>
