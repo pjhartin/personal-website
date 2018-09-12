@@ -3,12 +3,13 @@
 
     <!-- Navigation -->
     <nav class="nav">
+      <div class="faded-top fixed w-full h-32 background-red"></div>
+      <div class="faded-bottom fixed w-full h-32 pin-b"></div>
       <nuxt-link to="/" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-l md:pl-12 pl-8 pb-8 uppercase">Home</nuxt-link>
       <nuxt-link to="/work" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-l md:pl-12 pl-8 pt-8 uppercase">Works</nuxt-link>
       <nuxt-link to="/research" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-r md:pr-12 pr-8 pt-8 uppercase">Research</nuxt-link>
       <nuxt-link to="/contact" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase">Contact</nuxt-link>
     </nav>
-
     <!-- Nuxt Router -->
     <nuxt/>
 
@@ -62,6 +63,22 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.faded-top {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.faded-bottom {
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 </style>
 
