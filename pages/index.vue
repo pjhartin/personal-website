@@ -7,11 +7,10 @@
 
     <!-- Shapes -->
     <div class="shapes absolute pin overflow-hidden z-minus">
-      <div class="shape square">
-      </div>
-      <div class="shape triangle"></div>
       <div class="shape circle"></div>
-     
+      <div class="shape square"></div>
+      <div class="shape triangle"></div>
+
     </div>
 
   </section>
@@ -37,6 +36,8 @@ export default {
 
 .square {
   background: #fcd5ff;
+  animation: travelTwo 1s ease-in forwards;
+  animation-delay: 300ms;
 }
 
 .triangle {
@@ -47,9 +48,10 @@ export default {
 }
 
 .circle {
+  border-radius: 50%;
   background: #ff8282;
-  animation: travelTwo 1s ease-in forwards;
-  animation-delay: 300ms;
+  animation: growCircle 300ms ease-in forwards;
+  animation-delay: 1s;
 }
 
 @keyframes travelOne {
@@ -69,5 +71,14 @@ export default {
     transform: translate(-75%, -75%);
   }
 }
+@keyframes growCircle {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
 
 </style>
