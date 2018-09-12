@@ -40,16 +40,34 @@ export default {
 }
 
 .triangle {
-  transform: translate(-25%, -25%);
   background: #e5f2ff;
-  animation: travelOne 2s infinite alternate linear;
+  animation: travelOne 1s ease-in forwards;
+  animation-delay: 300ms;
+
 }
 
 .circle {
-  transform: translate(-75%, -75%);
   background: #ff8282;
-  animation: travelTwo 4s infinite alternate linear;
+  animation: travelTwo 1s ease-in forwards;
+  animation-delay: 300ms;
 }
 
+@keyframes travelOne {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-25%, -25%);
+  }
+}
+
+@keyframes travelTwo {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(-75%, -75%);
+  }
+}
 
 </style>
