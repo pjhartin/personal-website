@@ -18,21 +18,30 @@
 </template>
 
 <script>
-  export default {
-
-    head(){
-      return {
-          title: 'Phillip Hartin', // set a title
-          htmlAttrs: {
-            lang: 'en',
-          },
-        link: [
-          {rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display"}
-        ]
+export default {
+  head() {
+    return {
+      title: 'Phillip Hartin', // set a title
+      htmlAttrs: {
+        lang: 'en'
+      },
+      link: [],
+      script: [
+        {
+          src:
+            'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js',
+          type: 'text/javascript'
+        },
+        {
+          innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display"]}});`,
+          type: 'text/javascript',
+          body: true
         }
-    }
-
-  };
+      ],
+      __dangerouslyDisableSanitizers: ['script']
+    };
+  }
+};
 </script>
 
 <style>
