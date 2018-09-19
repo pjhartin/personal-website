@@ -77,7 +77,7 @@ module.exports = {
                 extensions: ["vue"]
               }
             ],
-            whitelist: ["html", "body", "nuxt-progress"]
+            whitelist: ["html", "body", "nuxt-progress", "wf-active"]
           })
         );
       }
