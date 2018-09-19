@@ -68,7 +68,7 @@ html {
 .faded-top {
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 33%,
     rgba(255, 255, 255, 0) 100%
   );
 }
@@ -76,7 +76,7 @@ html {
 .faded-bottom {
   background: linear-gradient(
     to top,
-    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 1) 33%,
     rgba(255, 255, 255, 0) 100%
   );
 }
