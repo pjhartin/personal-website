@@ -1,6 +1,6 @@
-const path = require('path');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
-const glob = require('glob-all');
+const path = require("path");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const glob = require("glob-all");
 
 class TailwindExtractor {
   static extract(content) {
@@ -9,23 +9,40 @@ class TailwindExtractor {
 }
 
 module.exports = {
-  css: ['assets/main.css', '~/assets/css/tailwind.css'],
+  css: ["assets/main.css", "~/assets/css/tailwind.css"],
   /*
   ** Headers of the page
   */
   head: {
-    title: 'personal-website',
+    title: "Phillip Hartin",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "Building tech for the web and mobile"
+      },
+      // Open Graph
+      { name: "og:title", content: "Phillip Hartin" },
+      {
+        name: "og:description",
+        content: "Building tech for the web and mobile"
+      },
+      { name: "og:type", content: "website" },
+      { name: "og:url", content: "https://philliphartin.com" },
+      { name: "og:image", content: "static/images/seo.jpg" }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      // Favicon
+      { rel: "icon", type: "image/png", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", href: "/favicon-16x16.png" }
+    ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: "#ff8282" },
   /*
   ** Build configuration
   */
@@ -37,9 +54,9 @@ module.exports = {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
         });
       }
@@ -50,17 +67,17 @@ module.exports = {
             // purgecss configuration
             // https://github.com/FullHuman/purgecss
             paths: glob.sync([
-              path.join(__dirname, './pages/**/*.vue'),
-              path.join(__dirname, './layouts/**/*.vue'),
-              path.join(__dirname, './components/**/*.vue')
+              path.join(__dirname, "./pages/**/*.vue"),
+              path.join(__dirname, "./layouts/**/*.vue"),
+              path.join(__dirname, "./components/**/*.vue")
             ]),
             extractors: [
               {
                 extractor: TailwindExtractor,
-                extensions: ['vue']
+                extensions: ["vue"]
               }
             ],
-            whitelist: ['html', 'body', 'nuxt-progress']
+            whitelist: ["html", "body", "nuxt-progress"]
           })
         );
       }
