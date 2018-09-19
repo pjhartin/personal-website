@@ -2,10 +2,12 @@
   <section class="h-full w-full flex content-center justify-center font-serif flex-col text-center">
     <div class="container mx-auto md:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <div class="work mb-24" v-for="(publication, index) in publications" :key="index">
-        <a class="title text-3xl md:text-3xl no-underline text-black" :href="publication.link" target="_blank">{{publication.title}}</a>
-        <div v-if="publication.authors" class="text-xl text-grey-darker mt-4">{{publication.authors}}</div>
-        <div v-if="publication.publisher" class="text text-grey-dark mt-4">{{publication.publisher}}</div>    
-        <div v-if="publication.year" class="text-xl text-grey-dark mt-4">{{publication.year}}</div>
+        <a :href="publication.link" target="_blank" class="no-underline text-black">
+          <div class="title text-3xl md:text-3xl no-underline text-black" >{{publication.title}}</div>
+          <div v-if="publication.authors" class="text-xl text-grey-darker mt-4">{{publication.authors}}</div>
+          <div v-if="publication.publisher" class="text text-grey-dark mt-4">{{publication.publisher}}</div>    
+          <div v-if="publication.year" class="text-xl text-grey-dark mt-4">{{publication.year}}</div>
+      </a>
       </div>
     </div>
   </section>
