@@ -1,6 +1,6 @@
 <template>
   <section class="h-full w-full flex content-center justify-center font-serif flex-col text-center">
-    <div class="container mx-auto w-1/2 pl-8 pr-8 mt-24 mb-12">
+    <div class="container mx-auto md:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <div class="work mb-24" v-for="(publication, index) in publications" :key="index">
         <a class="title text-3xl md:text-3xl no-underline text-black" :href="publication.link" target="_blank">{{publication.title}}</a>
         <div v-if="publication.authors" class="text-xl text-grey-darker mt-4">{{publication.authors}}</div>

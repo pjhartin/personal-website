@@ -1,9 +1,9 @@
 <template>
   <section class="h-full w-full flex content-center justify-center font-serif flex-col text-center">
-    <div class="container mx-auto w-2/3 pl-8 pr-8 mt-24 mb-12">
+    <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12">
       <div class="work mb-24" v-for="(project, index) in projects" :key="index">
-        <a class="title text-3xl md:text-5xl no-underline text-black" :href="project.link" target="_blank">{{project.title}}<span class="year text-2xl ml-4">{{project.year}}</span></a>
-        <div v-if="project.role" class="role text-2xl text-grey-dark mt-4">{{project.role}}</div>
+        <a class="title text-4xl md:text-5xl no-underline text-black" :href="project.link" target="_blank">{{project.title}}<span class="year text-2xl ml-4">{{project.year}}</span></a>
+        <div v-if="project.role" class="role text-2xl text-grey-darker mt-4">{{project.role}}</div>
       <div v-if="project.subtitle" class="subtitle text text-grey-dark mt-4">{{project.subtitle}}</div>    
         <div v-if="project.tech" class="tech text-sm text-grey-darker mt-4">{{project.tech}}</div>
       </div>
