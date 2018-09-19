@@ -18,6 +18,16 @@ export default {
       publications: [
         {
           title:
+            'Improving Healthcare Intervention Outcomes via Ubiquitous Computing (PhD Thesis)',
+          year: '2016',
+          authors:
+            'Phillip J Hartin, Chris D Nugent, Sally I McClean, Ian Cleland, JoAnn T Tschanz, Christine J Clark, Maria C Norton',
+          publisher: 'Faculty of Computing and Engineering, Ulster University',
+          link:
+            'https://github.com/pjhartin/phd-thesis-latex/blob/master/Thesis.pdf'
+        },
+        {
+          title:
             'The empowering role of mobile apps in behavior change interventions: The Gray Matters randomized controlled trial',
           year: '2016',
           authors:
