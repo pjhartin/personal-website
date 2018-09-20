@@ -3,7 +3,7 @@
     <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12">
         <div class="work list-item mb-24 relative" v-for="(project, index) in projects" :key="index">
           <a :href="project.link" target="_blank" class="no-underline text-black">
-            <div class="title text-4xl md:text-5xl no-underline text-black">{{project.title}}<span class="year text-2xl ml-4">{{project.year}}</span></div>
+            <h2 class="title text-4xl md:text-5xl no-underline text-black font-normal">{{project.title}}<span class="year text-2xl ml-4">{{project.year}}</span></h2>
             <div v-if="project.role" class="role text-2xl text-grey-darker mt-4">{{project.role}}</div>
             <div v-if="project.subtitle" class="subtitle text text-grey-dark mt-4">{{project.subtitle}}</div>
             <div v-if="project.tech" class="tech text-sm text-grey-darker mt-4">{{project.tech}}</div>

@@ -4,7 +4,7 @@
       <div class="work list-item mb-24 relative" v-for="(publication, index) in publications" :key="index">
 
         <a :href="publication.link" target="_blank" class="no-underline text-black">
-          <div class="title text-2xl md:text-3xl no-underline text-black" >{{publication.title}}</div>
+          <h2 class="title text-2xl md:text-3xl no-underline text-black font-normal" >{{publication.title}}</h2>
           <div v-if="publication.authors" class="text-lg md:text-xl text-grey-darker mt-4">{{publication.authors}}</div>
           <div v-if="publication.publisher" class="text text-grey-dark mt-4">{{publication.publisher}}</div>
           <div v-if="publication.year" class="text-xl text-grey-dark mt-4">{{publication.year}}</div>
