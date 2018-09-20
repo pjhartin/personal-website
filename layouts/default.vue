@@ -3,8 +3,8 @@
 
     <!-- Navigation -->
     <nav class="nav">
-      <div class="faded-top fixed w-full h-32 background-red"></div>
-      <div class="faded-bottom fixed w-full h-32 pin-b"></div>
+      <div class="faded-top fixed w-full h-32 background-red z-10"></div>
+      <div class="faded-bottom fixed w-full h-32 pin-b z-10"></div>
       <nuxt-link to="/" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-l md:pl-12 pl-8 pb-8 uppercase">Home</nuxt-link>
       <nuxt-link to="/work" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-l md:pl-12 pl-8 pt-8 uppercase">Works</nuxt-link>
       <nuxt-link to="/research" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-r md:pr-12 pr-8 pt-8 uppercase">Research</nuxt-link>
@@ -24,24 +24,24 @@
 export default {
   head() {
     return {
-      title: 'Phillip Hartin',
+      title: "Phillip Hartin",
       htmlAttrs: {
-        lang: 'en'
+        lang: "en"
       },
       link: [],
       script: [
         {
           src:
-            'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js',
-          type: 'text/javascript'
+            "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+          type: "text/javascript"
         },
         {
           innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display"]}});`,
-          type: 'text/javascript',
+          type: "text/javascript",
           body: true
         }
       ],
-      __dangerouslyDisableSanitizers: ['script']
+      __dangerouslyDisableSanitizers: ["script"]
     };
   }
 };
@@ -49,8 +49,8 @@ export default {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
