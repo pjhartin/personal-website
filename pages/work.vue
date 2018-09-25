@@ -38,7 +38,6 @@ export default {
           title: "Analogue Gallery",
           year: "2016",
           role: "Developer",
-          link: "https://analoguegallery.com.au",
           tech: "VanillaJS"
         },
         {
