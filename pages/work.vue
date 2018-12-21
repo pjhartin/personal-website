@@ -25,7 +25,7 @@ export default {
           title: "Healthy Taps",
           year: "2018",
           role: "Developer",
-          tech: "Ionic, Firebase, Vue"
+          tech: "Ionic, Firebase, Vue, Laravel, Google Cloud Engine"
         },
         {
           title: "The Design Conference",
