@@ -2,7 +2,7 @@
   <section
     class="h-full min-h-screen bg-grey-light w-full flex content-center justify-center font-serif flex-col text-left"
   >
-    <div class="container mx-auto md:w-2/3 mt-24 mb-12 bg-white shadow-material p-12">
+    <div id="resume" class="container mx-auto md:w-2/3 mt-24 mb-12 bg-white shadow-material p-12">
       <div class="flex items-center">
         <div class="headings flex-grow">
           <h2 class="title text-4xl no-underline text-black font-normal">Dr. Phillip Hartin</h2>
@@ -13,7 +13,7 @@
             v-on:click="printResume"
             class="button bg-grey-light rounded-full p-4 group hover:bg-red-light cursor-pointer"
           >
-            <i data-feather="printer" class="text-white"></i>
+            <i data-feather="phone-call" class="text-white" height="16px" width="16px"></i>
           </div>
         </div>
       </div>
@@ -74,7 +74,10 @@
 
 <script>
 import feather from "feather-icons";
-// import printJS from "print-js";
+
+// if (process.browser) {
+// require("print-js");
+// }
 
 export default {
   mounted() {
@@ -83,6 +86,7 @@ export default {
   methods: {
     printResume: function() {
       console.log("Print resume");
+      // printJS("resume", "html");
     }
   },
   data() {
@@ -153,6 +157,19 @@ export default {
       ],
 
       projects: [
+        {
+          title: "VC Funding, Investment and Recruitment Platform",
+          personal: false,
+          year: 2017,
+          technologies: ["Laravel", "Vue"],
+          role: "Lead Architect and Developer",
+          key_features: [
+            "Payment Gateways",
+            "Job Advertisements",
+            "Notifications",
+            "Analytics"
+          ]
+        },
         {
           title: "Australia's first Online Ad Marketplace",
           personal: false,
