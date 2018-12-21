@@ -43,17 +43,31 @@ export default {
           ],
           institution: "Ulster University"
         }
+      ],
+      projects: [
+        {
+          title: "Australia's first Online Ad Marketplace",
+          personal: false,
+          year: 2016,
+          technologies: ["Laravel", "Angular", "Ionic"],
+          role: "Lead Architect and Developer",
+          key_features: [
+            "PWA",
+            "Escrow Payments",
+            "Marketplace",
+            "Inventory Management"
+          ]
+        },
+        {
+          title: "Small Business Marketplace",
+          personal: false,
+          year: 2016,
+          technologies: ["Laravel", "Vue"],
+          role: "Lead Developer",
+          key_features: ["Xero Integration", "Financial Planning"]
+        }
       ]
     };
   }
 };
 </script>
-
-<style>
-.hover-item.alt {
-  background: #fcd5ff;
-  height: 280px;
-  width: 280px;
-  border-radius: 0;
-}
-</style>
