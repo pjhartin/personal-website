@@ -43,7 +43,7 @@ export default {
           type: "text/javascript"
         },
         {
-          innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display"]}});`,
+          innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display", "Work Sans"]}});`,
           type: "text/javascript",
           body: true
         }

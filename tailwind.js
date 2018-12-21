@@ -190,7 +190,7 @@ module.exports = {
 
   fonts: {
     sans: [
-      "Open Sans",
+      "Work Sans",
       "system-ui",
       "BlinkMacSystemFont",
       "-apple-system",
