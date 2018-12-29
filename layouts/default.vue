@@ -20,7 +20,7 @@
       <a
         href="mailto:contact@philliphartin.com"
         class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase"
-      >Email</a>
+      >Contact</a>
     </nav>
     <!-- Nuxt Router -->
     <nuxt/>
