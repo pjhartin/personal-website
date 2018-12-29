@@ -1,15 +1,4 @@
-const path = require("path");
-const PurgecssPlugin = require("purgecss-webpack-plugin");
-const glob = require("glob-all");
-
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-z0-9-:/]+/g) || [];
-  }
-}
-
 module.exports = {
-  css: ["assets/main.css", "~/assets/css/tailwind.css"],
   /*
    ** Headers of the page
    */
@@ -70,35 +59,29 @@ module.exports = {
     color: "#ff8282"
   },
   /*
+   ** Global CSS
+   */
+
+  css: ["~/assets/main.css", "~/assets/css/tailwind.css"],
+
+  /*
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
+
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [],
+  /*
    ** Build configuration
    */
   build: {
-    extractCSS: true,
     /*
-     ** Run ESLint on save
+     ** You can extend webpack config here
      */
-    extend(config, {
-      isDev,
-      isClient
-    }) {
-      if (!isDev) {
-        config.plugins.push(
-          new PurgecssPlugin({
-            // purgecss configuration
-            // https://github.com/FullHuman/purgecss
-            paths: glob.sync([
-              path.join(__dirname, "./pages/**/*.vue"),
-              path.join(__dirname, "./layouts/**/*.vue"),
-              path.join(__dirname, "./components/**/*.vue")
-            ]),
-            extractors: [{
-              extractor: TailwindExtractor,
-              extensions: ["vue"]
-            }],
-            whitelist: ["html", "body", "nuxt-progress", "wf-active"]
-          })
-        );
-      }
+    extend(config, ctx) {
+
     }
   }
 };

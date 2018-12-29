@@ -14,6 +14,7 @@
     "cross-env": "^5.2.0",
     "feather-icons": "^4.9.0",
     "nuxt": "^2.3.4",
+    "nuxt-purgecss": "^0.2.0",
     "print-js": "^1.0.54"
   },
   "devDependencies": {
