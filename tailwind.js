@@ -167,7 +167,10 @@ module.exports = {
     sm: "576px",
     md: "768px",
     lg: "992px",
-    xl: "1200px"
+    xl: "1200px",
+    'print': {
+      'raw': 'print'
+    }
   },
 
   /*
@@ -190,7 +193,7 @@ module.exports = {
 
   fonts: {
     sans: [
-      "Open Sans",
+      "Work Sans",
       "system-ui",
       "BlinkMacSystemFont",
       "-apple-system",
@@ -410,7 +413,9 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors["grey-light"] }, colors),
+  borderColors: global.Object.assign({
+    default: colors["grey-light"]
+  }, colors),
 
   /*
   |-----------------------------------------------------------------------------
@@ -734,6 +739,7 @@ module.exports = {
     default: "0 2px 4px 0 rgba(0,0,0,0.10)",
     md: "0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)",
     lg: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
+    material: "0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)",
     inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
     outline: "0 0 0 3px rgba(52,144,220,0.5)",
     none: "none"

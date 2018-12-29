@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.3.4"
+    "feather-icons": "^4.9.0",
+    "nuxt": "^2.3.4",
+    "print-js": "^1.0.54"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
