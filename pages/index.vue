@@ -2,7 +2,7 @@
   <section class="h-screen w-screen flex content-center justify-center font-serif">
     <!-- Title -->
     <div class="title self-center z-10">
-      <h1 class="text-5xl font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
+      <h1 class="text-3xl md:text-5xl font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
     </div>
 
     <!-- Shapes -->
@@ -18,8 +18,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style>
@@ -44,7 +43,6 @@ export default {
   background: #e5f2ff;
   animation: travelOne 1s ease-in forwards;
   animation-delay: 300ms;
-
 }
 
 .circle {
@@ -79,6 +77,4 @@ export default {
     transform: translate(-50%, -50%) scale(0.5);
   }
 }
-
-
 </style>

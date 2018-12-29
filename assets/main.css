@@ -39,3 +39,28 @@ html {
     }
   }
 }
+
+// Hovering effects
+.hover-container {
+  z-index: -1;
+}
+
+.hover-item {
+  z-index: -1;
+  height: 300px;
+  width: 300px;
+  background: #e5f2ff;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.1);
+  transition: transform 125ms ease-in, opacity 180ms ease-in;
+}
+
+.list-item {
+  cursor: newcursor;
+}
+
+.list-item:hover .hover-item {
+  opacity: 0.8;
+  transform: scale(1);
+}
