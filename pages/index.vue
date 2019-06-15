@@ -1,13 +1,17 @@
 <template>
-  <section class="h-screen w-screen flex content-center justify-center font-serif">
+  <section class="h-screen w-screen flex content-center justify-center font-serif" @click="setNewColour">
 
     <!-- Shapes -->
-    <div class="shapes absolute pin overflow-hidden">
-      <div class="shape circle"></div>
-      <div class="shape triangle"></div>
+    <div class="shapes absolute pin overflow-hidden" v-bind:style="styleObject">
+      <div class="shape block"></div>
+      <div class="bouncing-ball-y">
+        <div class="bouncing-ball-x">
+          <div class="ball" ></div>
+        </div>
+      </div>
       <!--<div class="shape square"></div>-->
       <div class="title self-center">
-        <h1 class="name font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
+        <h1 class="name font-normal">Phillip<br> Hartin<span class="text-xl">, PhD</span></h1>
       </div>
     </div>
 
@@ -16,7 +20,32 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      activeColour: "",
+      colours: ["white", "teal", "indigo"]
+    };
+  },
+  methods: {
+    setNewColour() {
+      const choices = this.colours.filter(colour => {
+        return colour !== this.activeColour;
+      });
+      this.activeColour = choices[Math.floor(Math.random() * choices.length)];
+    }
+  },
+  computed: {
+    styleObject() {
+      return {
+        backgroundColor: this.activeColour
+      };
+    }
+  },
+  created() {
+    this.setNewColour();
+  }
+};
 </script>
 
 <style>
@@ -31,7 +60,7 @@ export default {};
 }
 
 .name {
-  font-size: 6.5rem;
+  font-size: 7.5rem;
 }
 
 .shapes {
@@ -45,11 +74,11 @@ export default {};
 .shape {
   position: absolute;
   background: none;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 55%;
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
-  width: 250px;
+  width: 400px;
   height: 250px;
 }
 
@@ -59,17 +88,35 @@ export default {};
   animation-delay: 300ms;
 }
 
-.triangle {
-  background: #ffa199;
-  mix-blend-mode: normal;
-  animation: travelOne 1s ease-in forwards;
-  animation-delay: 300ms;
+.ball {
+  background: #eee;
+  mix-blend-mode: exclusion;
   border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
-.circle {
+.bouncing-ball-y {
+  position: absolute;
+  width: 100%;
+  height: calc(100%);
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-duration: 1200ms;
+}
+
+.bouncing-ball-x {
+  position: absolute;
+  animation-name: travel;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 4.8s;
+}
+
+.block {
   /*border-radius: 50%;*/
-  background: #006667;
+  background: #ffe2e2;
   animation: growCircle 300ms ease-in forwards;
   animation-delay: 1s;
 }
@@ -106,6 +153,27 @@ export default {};
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes travel {
+  from {
+    left: 0px;
+  }
+  to {
+    left: calc(100% - 100px);
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    top: 120px;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: calc(50% + 25px);
+    animation-timing-function: ease-out;
   }
 }
 </style>

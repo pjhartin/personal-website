@@ -6,20 +6,20 @@
       <div class="fixed w-full h-32 pin-b z-10"></div>
       <nuxt-link
         to="/"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-l md:pl-12 pl-8 pb-8 uppercase print:invisible"
+        class="link z-50 text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-l md:pl-12 pl-8 pb-8 uppercase print:invisible"
       >Home</nuxt-link>
       <nuxt-link
         to="/work"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-l md:pl-12 pl-8 pt-8 uppercase print:invisible"
+        class="link z-50  text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-l md:pl-12 pl-8 pt-8 uppercase print:invisible"
       >Works</nuxt-link>
       <nuxt-link
         to="/research"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-r md:pr-12 pr-8 pt-8 uppercase print:invisible"
+        class="link z-50  text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-r md:pr-12 pr-8 pt-8 uppercase print:invisible"
       >Research</nuxt-link>
       <!-- <nuxt-link to="/contact" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase">Contact</nuxt-link> -->
       <a
         href="mailto:contact@philliphartin.com"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase print:invisible"
+        class="link z-50 text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase print:invisible"
       >Contact</a>
     </nav>
     <!-- Nuxt Router -->
@@ -89,5 +89,8 @@ html {
     rgba(255, 255, 255, 0) 100%
   );
 }
-</style>
 
+.link {
+  mix-blend-mode: difference;
+}
+</style>
