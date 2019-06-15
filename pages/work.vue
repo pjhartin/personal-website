@@ -1,6 +1,6 @@
 <template>
   <section class="h-full w-full flex content-center justify-center font-serif flex-col text-center">
-    <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12">
+    <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12" >
       <div class="work list-item mb-24 relative" v-for="(project, index) in projects" :key="index">
         <a :href="project.link" target="_blank" class="no-underline text-black">
           <h2 class="title text-4xl md:text-5xl no-underline text-black font-normal">
@@ -25,7 +25,9 @@
 </template>
 
 <script>
+import styleMixin from "./../mixin/style-mixin";
 export default {
+  mixins: [styleMixin],
   data() {
     return {
       projects: [

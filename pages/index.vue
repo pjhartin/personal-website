@@ -1,8 +1,8 @@
 <template>
-  <section class="h-screen w-screen flex content-center justify-center font-serif" @click="setNewColour">
+  <section class="h-screen w-screen flex content-center justify-center font-serif" @click="colourCycle">
 
     <!-- Shapes -->
-    <div class="shapes absolute pin overflow-hidden" v-bind:style="styleObject">
+    <div class="shapes absolute pin overflow-hidden" >
       <div class="shape block"></div>
       <div class="bouncing-ball-y">
         <div class="bouncing-ball-x">
@@ -20,30 +20,12 @@
 </template>
 
 <script>
+import { mapActions, mapState, mapGetters } from "vuex";
+import styleMixin from "./../mixin/style-mixin";
 export default {
+  mixins: [styleMixin],
   data() {
-    return {
-      activeColour: "",
-      colours: ["white", "teal", "indigo"]
-    };
-  },
-  methods: {
-    setNewColour() {
-      const choices = this.colours.filter(colour => {
-        return colour !== this.activeColour;
-      });
-      this.activeColour = choices[Math.floor(Math.random() * choices.length)];
-    }
-  },
-  computed: {
-    styleObject() {
-      return {
-        backgroundColor: this.activeColour
-      };
-    }
-  },
-  created() {
-    this.setNewColour();
+    return {};
   }
 };
 </script>
@@ -68,12 +50,10 @@ export default {
   animation-duration: 120000ms;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  background: white;
 }
 
 .shape {
   position: absolute;
-  background: none;
   top: 45%;
   left: 55%;
   transform: translate(-50%, -50%);
