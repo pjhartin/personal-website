@@ -3,9 +3,9 @@
 
     <!-- Shapes -->
     <div class="shapes absolute pin overflow-hidden">
-      <!--<div class="shape circle"></div>-->
+      <div class="shape circle"></div>
       <div class="shape triangle"></div>
-      <div class="shape square"></div>
+      <!--<div class="shape square"></div>-->
       <div class="title self-center">
         <h1 class="name font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
       </div>
@@ -31,7 +31,7 @@ export default {};
 }
 
 .name {
-  font-size: 7.5rem;
+  font-size: 6.5rem;
 }
 
 .shapes {
@@ -60,15 +60,16 @@ export default {};
 }
 
 .triangle {
-  background: #000;
+  background: #ffa199;
   mix-blend-mode: normal;
   animation: travelOne 1s ease-in forwards;
   animation-delay: 300ms;
+  border-radius: 50%;
 }
 
 .circle {
-  border-radius: 50%;
-  background: #ff8282;
+  /*border-radius: 50%;*/
+  background: #006667;
   animation: growCircle 300ms ease-in forwards;
   animation-delay: 1s;
 }
@@ -95,7 +96,7 @@ export default {};
     transform: translate(-50%, -50%) scale(1);
   }
   to {
-    transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
