@@ -37,16 +37,16 @@ export default {
       },
       link: [],
       script: [
-        {
-          src:
-            "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
-          type: "text/javascript"
-        },
-        {
-          innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display", "Work Sans"]}});`,
-          type: "text/javascript",
-          body: true
-        }
+        // {
+        //   src:
+        //     "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+        //   type: "text/javascript"
+        // },
+        // {
+        //   innerHTML: `WebFont.load({google: {families: ["Open Sans", "Playfair Display", "Work Sans"]}});`,
+        //   type: "text/javascript",
+        //   body: true
+        // }
       ],
       __dangerouslyDisableSanitizers: ["script"]
     };

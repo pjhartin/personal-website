@@ -10,38 +10,38 @@
 }
 
 /* Web Font Loader */
-html {
+/*html {*/
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  li,
-  a {
-    opacity: 0;
-    transition: opacity 100ms ease-in;
-  }
+  /*h1,*/
+  /*h2,*/
+  /*h3,*/
+  /*h4,*/
+  /*h5,*/
+  /*h6,*/
+  /*p,*/
+  /*ul,*/
+  /*li,*/
+  /*a {*/
+    /*opacity: 0;*/
+    /*transition: opacity 100ms ease-in;*/
+  /*}*/
 
-  &.wf-active {
+  /*&.wf-active {*/
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    ul,
-    li,
-    a {
-      opacity: 1;
-    }
-  }
-}
+    /*h1,*/
+    /*h2,*/
+    /*h3,*/
+    /*h4,*/
+    /*h5,*/
+    /*h6,*/
+    /*p,*/
+    /*ul,*/
+    /*li,*/
+    /*a {*/
+      /*opacity: 1;*/
+    /*}*/
+  /*}*/
+/*}*/
 
 /* Hovering effects  */
 .hover-container {

@@ -1,16 +1,14 @@
 <template>
   <section class="h-screen w-screen flex content-center justify-center font-serif">
-    <!-- Title -->
-    <div class="title self-center z-10">
-      <h1 class="text-3xl md:text-5xl font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
-    </div>
 
     <!-- Shapes -->
-    <div class="shapes absolute pin overflow-hidden z-minus">
-      <div class="shape circle"></div>
-      <div class="shape square"></div>
+    <div class="shapes absolute pin overflow-hidden">
+      <!--<div class="shape circle"></div>-->
       <div class="shape triangle"></div>
-
+      <div class="shape square"></div>
+      <div class="title self-center">
+        <h1 class="name font-normal">Phillip Hartin<span class="text-xl">, PhD</span></h1>
+      </div>
     </div>
 
   </section>
@@ -22,6 +20,28 @@ export default {};
 </script>
 
 <style>
+.title {
+  position: absolute;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.name {
+  font-size: 7.5rem;
+}
+
+.shapes {
+  /*animation-name: spin;*/
+  animation-duration: 120000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  background: white;
+}
+
 .shape {
   position: absolute;
   background: none;
@@ -29,8 +49,8 @@ export default {};
   left: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
 }
 
 .square {
@@ -40,7 +60,8 @@ export default {};
 }
 
 .triangle {
-  background: #e5f2ff;
+  background: #000;
+  mix-blend-mode: normal;
   animation: travelOne 1s ease-in forwards;
   animation-delay: 300ms;
 }
@@ -75,6 +96,15 @@ export default {};
   }
   to {
     transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 </style>
