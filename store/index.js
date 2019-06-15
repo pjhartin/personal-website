@@ -1,6 +1,17 @@
 export const state = () => ({
   activeBgColour: "white",
-  bgColours: ["white", "teal", "indigo"]
+  bgColours: [
+    "white",
+    "antiquewhite",
+    "teal",
+    "indigo",
+    "darkkhaki",
+    "darksalmon",
+    "mediumaquamarine",
+    "tan",
+    "sandybrown",
+    "#000063"
+  ]
 });
 
 export const actions = {
