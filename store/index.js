@@ -1,16 +1,14 @@
 export const state = () => ({
-  activeBgColour: "white",
+  activeBgColour: "antiquewhite",
   bgColours: [
-    "white",
     "antiquewhite",
-    "teal",
-    "indigo",
-    "darkkhaki",
+    "#330059", //Indigo Variant
     "darksalmon",
     "mediumaquamarine",
     "tan",
     "sandybrown",
-    "#000063"
+    "#1b1b1b", // Near Black
+    "rgb(39, 39, 108)" // Blue type
   ]
 });
 

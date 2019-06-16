@@ -57,7 +57,7 @@ export default {
 }
 
 .square {
-  background: #fcd5ff;
+  background: #fff3de;
   animation: travelTwo 1s ease-in forwards;
   animation-delay: 300ms;
 }
