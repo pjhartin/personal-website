@@ -1,7 +1,5 @@
 <template>
   <section class="h-screen w-screen flex content-center justify-center font-serif" @click="colourCycle">
-
-    <!-- Shapes -->
     <div class="shapes absolute pin overflow-hidden" >
       <div class="shape block"></div>
       <div class="bouncing-ball-y">
@@ -9,16 +7,12 @@
           <div class="ball" ></div>
         </div>
       </div>
-      <!--<div class="shape square"></div>-->
-      <div class="title self-center">
+      <div class="header-container self-center">
         <h1 class="name font-normal">Phillip<br> Hartin<span class="text-xl">, PhD</span></h1>
       </div>
     </div>
-
   </section>
-
 </template>
-
 <script>
 import { mapActions, mapState, mapGetters } from "vuex";
 import styleMixin from "./../mixin/style-mixin";
@@ -31,7 +25,7 @@ export default {
 </script>
 
 <style>
-.title {
+.header-container {
   position: absolute;
   background: none;
   top: 50%;
