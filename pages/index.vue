@@ -1,14 +1,21 @@
 <template>
-  <section class="h-screen w-screen flex content-center justify-center font-serif" @click="colourCycle">
-    <div class="shapes absolute pin overflow-hidden" >
+  <section
+    class="h-screen w-screen flex content-center justify-center font-serif"
+    @click="colourCycle"
+  >
+    <div class="shapes absolute inset-0 overflow-hidden">
       <div class="shape block"></div>
       <div class="bouncing-ball-y">
         <div class="bouncing-ball-x">
-          <div class="ball" ></div>
+          <div class="ball"></div>
         </div>
       </div>
       <div class="header-container self-center">
-        <h1 class="name font-normal">Phillip<br> Hartin<span class="text-xl">, PhD</span></h1>
+        <h1 class="name font-normal">
+          Phillip
+          <br>Hartin
+          <span class="text-xl">, PhD</span>
+        </h1>
       </div>
     </div>
   </section>
@@ -118,15 +125,6 @@ export default {
   }
   to {
     transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
 

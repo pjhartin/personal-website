@@ -62,8 +62,7 @@ module.exports = {
    ** Global CSS
    */
 
-  css: ["~/assets/main.css", "~/assets/css/tailwind.css"],
-
+  css: ['~/assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -72,16 +71,18 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['nuxt-purgecss'],
   /*
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {
-
+    postcss: {
+      plugins: {
+        tailwindcss: 'tailwind.config.js'
+      }
     }
+  },
+  purgeCSS: {
+    mode: 'postcss'
   }
 };

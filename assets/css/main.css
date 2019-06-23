@@ -1,3 +1,8 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Nuxt Page Transitions */
 .page-enter-active,
 .page-leave-active {
@@ -12,35 +17,35 @@
 /* Web Font Loader */
 /*html {*/
 
-  /*h1,*/
-  /*h2,*/
-  /*h3,*/
-  /*h4,*/
-  /*h5,*/
-  /*h6,*/
-  /*p,*/
-  /*ul,*/
-  /*li,*/
-  /*a {*/
-    /*opacity: 0;*/
-    /*transition: opacity 100ms ease-in;*/
-  /*}*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6,*/
+/*p,*/
+/*ul,*/
+/*li,*/
+/*a {*/
+/*opacity: 0;*/
+/*transition: opacity 100ms ease-in;*/
+/*}*/
 
-  /*&.wf-active {*/
+/*&.wf-active {*/
 
-    /*h1,*/
-    /*h2,*/
-    /*h3,*/
-    /*h4,*/
-    /*h5,*/
-    /*h6,*/
-    /*p,*/
-    /*ul,*/
-    /*li,*/
-    /*a {*/
-      /*opacity: 1;*/
-    /*}*/
-  /*}*/
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6,*/
+/*p,*/
+/*ul,*/
+/*li,*/
+/*a {*/
+/*opacity: 1;*/
+/*}*/
+/*}*/
 /*}*/
 
 /* Hovering effects  */
@@ -60,14 +65,14 @@
   mix-blend-mode: difference;
 }
 
-.hover-item .work-item{
+.hover-item .work-item {
   height: 280px;
   width: 280px;
   border-radius: 0;
 }
 
-.hover-item .research-item{
-/* Is Circle */
+.hover-item .research-item {
+  /* Is Circle */
 }
 
 .list-item {
