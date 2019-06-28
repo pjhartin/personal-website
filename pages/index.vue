@@ -11,10 +11,12 @@
         </div>
       </div>
       <div class="header-container text-white self-center">
-        <h1 class="name text-4xl md:text-6xl">
-          Phillip
-          <br>Hartin
-          <span class="text-xl">, PhD</span>
+        <h1 class="name text-6xl md:text-7xl flex flex-wrap align-bottom items-end w-full lg:w-2/3">
+          <span class="inline-flex mr-4">Phillip</span>
+          <span class="flex items-end">
+            Hartin
+            <span class="text-xl pb-4 md:pb-5 ml-2 whitespace-no-wrap">, PhD</span>
+          </span>
         </h1>
       </div>
     </div>
@@ -74,8 +76,20 @@ export default {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 4.8s;
+  animation-duration: 1s;
   /* TODO: Make 1s on mobile */
+}
+
+@screen md {
+  .bouncing-ball-x {
+    animation-duration: 2s;
+  }
+}
+
+@screen lg {
+  .bouncing-ball-x {
+    animation-duration: 4.8s;
+  }
 }
 
 .block {
