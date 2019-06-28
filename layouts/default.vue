@@ -19,12 +19,18 @@
         to="/research"
         class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed top-0 right-0 md:pr-12 pr-8 pt-8 uppercase print:invisible"
       >Research</nuxt-link>
-      <!-- <nuxt-link to="/contact" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase">Contact</nuxt-link> -->
+
+      <nuxt-link
+        v-on:click.native="colourCycle"
+        to="/about"
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase print:invisible"
+      >About</nuxt-link>
+      <!-- 
       <a
         v-on:click.native="colourCycle"
         href="mailto:contact@philliphartin.com"
         class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase print:invisible"
-      >Contact</a>
+      >Contact</a>-->
     </nav>
     <!-- Nuxt Router -->
     <nuxt/>

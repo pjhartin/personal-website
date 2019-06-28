@@ -3,7 +3,11 @@
     class="blend-difference h-full w-full flex content-center justify-center font-serif flex-col text-center"
   >
     <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12">
-      <div class="list-item mb-24 relative" v-for="(project, index) in projects" :key="index">
+      <div
+        class="list-item cursor-pointer mb-24 relative"
+        v-for="(project, index) in projects"
+        :key="index"
+      >
         <a :href="project.link" target="_blank" class="link no-underline text-white">
           <div v-if="project.awards" class="awards text-lg mb-2 text font-bold">{{project.awards}}</div>
           <h2 class="title text-5xl md:text-5xl no-underline font-normal">
