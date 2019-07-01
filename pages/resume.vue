@@ -308,7 +308,7 @@ export default {
             "CI/CD Pipeline Development, Automation, Buddy, Travis, PHPUnit, Behat and Laravel Dusk"
         },
         {
-          title: "Soft Skills",
+          title: "Interpersonal",
           items:
             "Clear communicator, approachable and dependable, highly analytical yet decisive"
         }

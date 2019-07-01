@@ -1,26 +1,36 @@
 <template>
-  <div>
+  <div id="main" v-bind:style="styleObject">
     <!-- Navigation -->
     <nav class="nav">
       <div class="fixed w-full h-32 background-red z-10"></div>
-      <div class="fixed w-full h-32 pin-b z-10"></div>
+      <div class="fixed w-full h-32 bottom-0 z-10"></div>
       <nuxt-link
+        v-on:click.native="colourCycle"
         to="/"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-l md:pl-12 pl-8 pb-8 uppercase print:invisible"
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 left-0 md:pl-12 pl-8 pb-8 uppercase print:invisible"
       >Home</nuxt-link>
       <nuxt-link
+        v-on:click.native="colourCycle"
         to="/work"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-l md:pl-12 pl-8 pt-8 uppercase print:invisible"
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed top-0 left-0 md:pl-12 pl-8 pt-8 uppercase print:invisible"
       >Works</nuxt-link>
       <nuxt-link
+        v-on:click.native="colourCycle"
         to="/research"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-t pin-r md:pr-12 pr-8 pt-8 uppercase print:invisible"
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed top-0 right-0 md:pr-12 pr-8 pt-8 uppercase print:invisible"
       >Research</nuxt-link>
-      <!-- <nuxt-link to="/contact" class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase">Contact</nuxt-link> -->
+
+      <nuxt-link
+        v-on:click.native="colourCycle"
+        to="/about"
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase print:invisible"
+      >About</nuxt-link>
+      <!-- 
       <a
+        v-on:click.native="colourCycle"
         href="mailto:contact@philliphartin.com"
-        class="z-50 text-grey-dark hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed pin-b pin-r md:pr-12 pr-8 pb-8 uppercase print:invisible"
-      >Contact</a>
+        class="link z-50 blend-difference text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase print:invisible"
+      >Contact</a>-->
     </nav>
     <!-- Nuxt Router -->
     <nuxt/>
@@ -28,7 +38,9 @@
 </template>
 
 <script>
+import styleMixin from "./../mixin/style-mixin";
 export default {
+  mixins: [styleMixin],
   head() {
     return {
       title: "Phillip Hartin",
@@ -73,21 +85,4 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-.faded-top {
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 1) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.faded-bottom {
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 1) 33%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
 </style>
-
