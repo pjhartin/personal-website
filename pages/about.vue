@@ -9,8 +9,8 @@
       </p>
       <p class="md:text-2xl mb-4"></p>
       <p class="md:text-2xl mb-4">
-        I'm currently the
-        <b>Engineering & Development Lead at Big Picture Medical</b>, a medical technology company working to set the global standard in the delivery of specialist quality care.
+        I'm currently the Engineering & Development Lead at
+        <b>Big Picture Medical</b>, a medical technology company working to set the global standard in the delivery of specialist quality care.
       </p>
       <p
         class="md:text-2xl mb-4"
