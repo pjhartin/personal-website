@@ -1,14 +1,23 @@
 <template>
-  <section class="h-screen w-screen flex content-center justify-center font-serif" @click="colourCycle">
-    <div class="shapes absolute pin overflow-hidden" >
+  <section
+    class="h-screen w-screen flex content-center justify-center font-serif blend-difference"
+    @click="colourCycle"
+  >
+    <div class="shapes absolute inset-0 overflow-hidden">
       <div class="shape block"></div>
       <div class="bouncing-ball-y">
         <div class="bouncing-ball-x">
-          <div class="ball" ></div>
+          <div class="ball"></div>
         </div>
       </div>
-      <div class="header-container self-center">
-        <h1 class="name font-normal">Phillip<br> Hartin<span class="text-xl">, PhD</span></h1>
+      <div class="header-container text-white self-center">
+        <h1 class="name text-6xl md:text-7xl flex flex-wrap align-bottom items-end w-full lg:w-2/3">
+          <span class="inline-flex mr-4">Phillip</span>
+          <span class="flex items-end">
+            Hartin
+            <span class="text-xl pb-4 md:pb-5 ml-2 whitespace-no-wrap">, PhD</span>
+          </span>
+        </h1>
       </div>
     </div>
   </section>
@@ -31,19 +40,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   mix-blend-mode: difference;
-}
-
-.name {
-  font-size: 7.5rem;
-}
-
-.shapes {
-  /*animation-name: spin;*/
-  animation-duration: 120000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
 }
 
 .shape {
@@ -54,12 +51,6 @@ export default {
   mix-blend-mode: multiply;
   width: 400px;
   height: 250px;
-}
-
-.square {
-  background: #fff3de;
-  animation: travelTwo 1s ease-in forwards;
-  animation-delay: 300ms;
 }
 
 .ball {
@@ -85,49 +76,25 @@ export default {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 4.8s;
+  animation-duration: 1s;
+  /* TODO: Make 1s on mobile */
+}
+
+@screen md {
+  .bouncing-ball-x {
+    animation-duration: 2s;
+  }
+}
+
+@screen lg {
+  .bouncing-ball-x {
+    animation-duration: 4.8s;
+  }
 }
 
 .block {
-  /*border-radius: 50%;*/
   background: #ffe2e2;
-  animation: growCircle 300ms ease-in forwards;
-  animation-delay: 1s;
-}
-
-@keyframes travelOne {
-  from {
-    transform: translate(-50%, -50%);
-  }
-  to {
-    transform: translate(-25%, -25%);
-  }
-}
-
-@keyframes travelTwo {
-  from {
-    transform: translate(-50%, -50%);
-  }
-  to {
-    transform: translate(-75%, -75%);
-  }
-}
-@keyframes growCircle {
-  from {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  to {
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  opacity: 0.1;
 }
 
 @keyframes travel {

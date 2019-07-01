@@ -1,20 +1,25 @@
 <template>
-  <section class="h-full w-full flex content-center justify-center font-serif flex-col text-center">
-    <div class="container mx-auto md:w-2/3 pl-8 pr-8 mt-24 mb-12" >
-      <div class="list-item blend-difference mb-24 relative" v-for="(project, index) in projects" :key="index">
+  <section
+    class="blend-difference h-full w-full flex content-center justify-center font-serif flex-col text-center"
+  >
+    <div class="container mx-auto md:w-2/3 lg:w-1/2 pl-8 pr-8 mt-24 mb-12">
+      <div
+        class="list-item cursor-pointer mb-24 relative"
+        v-for="(project, index) in projects"
+        :key="index"
+      >
         <a :href="project.link" target="_blank" class="link no-underline text-white">
-
-          <div  v-if="project.awards" class="awards text-lg mb-2 text font-bold">{{project.awards}}</div>
-          <h2 class="title text-5xl md:text-5xl no-underline font-normal">
+          <div v-if="project.awards" class="awards text-lg mb-2 text font-bold">{{project.awards}}</div>
+          <h2 class="title text-3xl md:text-4xl no-underline font-bold">
             {{project.title}}
-            <span class="year text-2xl ml-4">{{project.year}}</span>
+            <span class="year text-xl font-normal">{{project.year}}</span>
           </h2>
           <div v-if="project.role" class="role text-xl mt-4">{{project.role}}</div>
 
           <div v-if="project.client" class="role text mt-4">{{project.client}}</div>
           <!--<div v-if="project.tech" class="tech mt-4">{{project.tech}}</div>-->
           <div
-            class="hover-container absolute pin h-full w-full flex content-center justify-center items-center"
+            class="hover-container absolute inset-0 h-full w-full flex content-center justify-center items-center"
           >
             <div class="hover-item work-item"></div>
           </div>
@@ -120,13 +125,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.blend-difference {
-  mix-blend-mode: difference;
-}
-
-.link {
-  mix-blend-mode: difference;
-}
-</style>
