@@ -4,7 +4,8 @@ module.exports = {
    */
   head: {
     title: "Phillip Hartin",
-    meta: [{
+    meta: [
+      {
         charset: "utf-8"
       },
       {
@@ -62,27 +63,32 @@ module.exports = {
    ** Global CSS
    */
 
-  css: ['~/assets/css/main.css'],
+  css: [
+    "~/assets/css/main.css",
+    "@fortawesome/fontawesome-svg-core/styles.css"
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['nuxt-purgecss'],
+  modules: ["nuxt-purgecss"],
   /*
    ** Build configuration
    */
   build: {
     postcss: {
       plugins: {
-        tailwindcss: 'tailwind.config.js'
+        tailwindcss: "tailwind.config.js"
       }
     }
   },
   purgeCSS: {
-    mode: 'postcss'
+    mode: "postcss"
   }
 };
