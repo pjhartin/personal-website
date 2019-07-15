@@ -8,11 +8,23 @@
         v-for="(publication, index) in publications"
         :key="index"
       >
-        <a :href="publication.link" target="_blank" class="link no-underline text-white">
-          <h2 class="title text-xl md:text-2xl no-underline font-bold">{{publication.title}}</h2>
-          <div v-if="publication.authors" class="text md:text-xl mt-4">{{publication.authors}}</div>
-          <div v-if="publication.publisher" class="text-sm mt-4">{{publication.publisher}}</div>
-          <div v-if="publication.year" class="text-lg mt-4">{{publication.year}}</div>
+        <a
+          :href="publication.link"
+          target="_blank"
+          class="link no-underline text-white"
+        >
+          <h2 class="title text-xl md:text-2xl no-underline font-bold">
+            {{ publication.title }}
+          </h2>
+          <div v-if="publication.authors" class="text md:text-xl mt-4">
+            {{ publication.authors }}
+          </div>
+          <div v-if="publication.publisher" class="text-sm mt-4">
+            {{ publication.publisher }}
+          </div>
+          <div v-if="publication.year" class="text-lg mt-4">
+            {{ publication.year }}
+          </div>
 
           <div
             class="hover-container absolute inset-0 h-full w-full flex content-center justify-center items-center"

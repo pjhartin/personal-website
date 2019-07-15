@@ -9,6 +9,7 @@
 @tailwind utilities;
 
 /* Nuxt Page Transitions */
+/* purgecss start ignore */
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.5s;
@@ -92,3 +93,8 @@
   opacity: 0.1;
   transform: scale(1);
 }
+
+/* Custom Selection Style */
+::selection { background: #405dff; }
+
+/* purgecss end ignore */

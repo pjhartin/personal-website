@@ -4,19 +4,29 @@
   >
     <div class="container mx-auto md:w-2/3 lg:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <div
-        class="list-item cursor-pointer mb-24 relative"
+        class="list-item cursor-pointer mb-32 relative"
         v-for="(project, index) in projects"
         :key="index"
       >
-        <a :href="project.link" target="_blank" class="link no-underline text-white">
-          <div v-if="project.awards" class="awards text-lg mb-2 text font-bold">{{project.awards}}</div>
+        <a
+          :href="project.link"
+          target="_blank"
+          class="link no-underline text-white"
+        >
+          <div v-if="project.awards" class="awards text-lg mb-2 text font-bold">
+            {{ project.awards }}
+          </div>
           <h2 class="title text-3xl md:text-4xl no-underline font-bold">
-            {{project.title}}
-            <span class="year text-xl font-normal">{{project.year}}</span>
+            {{ project.title }}
+            <span class="year text-xl font-normal">{{ project.year }}</span>
           </h2>
-          <div v-if="project.role" class="role text-xl mt-4">{{project.role}}</div>
+          <div v-if="project.role" class="role text-xl mt-4">
+            {{ project.role }}
+          </div>
 
-          <div v-if="project.client" class="role text mt-4">{{project.client}}</div>
+          <div v-if="project.client" class="role text mt-4">
+            {{ project.client }}
+          </div>
           <!--<div v-if="project.tech" class="tech mt-4">{{project.tech}}</div>-->
           <div
             class="hover-container absolute inset-0 h-full w-full flex content-center justify-center items-center"
