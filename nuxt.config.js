@@ -65,7 +65,6 @@ module.exports = {
 
   css: [
     "~/assets/css/main.css",
-    "@fortawesome/fontawesome-svg-core/styles.css"
   ],
   /*
    ** Plugins to load before mounting the App
@@ -89,6 +88,9 @@ module.exports = {
     }
   },
   purgeCSS: {
-    mode: "postcss"
+    mode: "postcss",
+    // Exclude
+    whitelist: ['body', 'html', 'nuxt-progress'],
+
   }
 };
