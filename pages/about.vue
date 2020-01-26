@@ -4,19 +4,21 @@
   >
     <div class="container mx-auto md:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <p class="md:text-xl mb-4">
-        Hi, I'm Phillip Hartin, <br />thanks for visiting my little slice of the
-        internet.
+        Hello! I'm Phillip Hartin, <br />and thanks for visiting my little slice
+        of the internet.
       </p>
       <p class="md:text-xl mb-4"></p>
       <p class="md:text-xl mb-4">
-        I'm currently the Engineering & Development Lead at Big Picture Medical,
-        a medical technology company working to set the global standard in the
-        delivery of specialist quality care.
+        I'm the Engineering & Development Lead at
+        <a href="https://www.bigpicturemedical.com" class="text-blue-300"
+          >Big Picture Medical</a
+        >, a medical technology company striving to set the global standard in
+        the delivery of specialist quality care.
       </p>
       <p class="md:text-xl mb-4">
-        Outside of this role, I'm involved in a number of healthcare research
-        projects on a software consultancy basis, developing mobile apps, web
-        platforms, and all their supporting infrastructures.
+        Outside of this role, I'm involved in research and creative projects on
+        a consultancy basis, developing web platforms, mobile apps, and their
+        supporting infrastructures.
       </p>
       <!-- <p class="md:text-2xl mb-4">
         Outside of this role, I'm involved in a range of healthcare research projects and creative projects as the co-founder of
@@ -44,12 +46,12 @@
 </template>
 
 <script>
-import styleMixin from "./../mixin/style-mixin";
+import styleMixin from './../mixin/style-mixin'
 
 export default {
   mixins: [styleMixin],
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
