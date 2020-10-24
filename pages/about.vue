@@ -9,23 +9,14 @@
       </p>
       <p class="md:text-xl mb-4"></p>
       <p class="md:text-xl mb-4">
-        I'm the Engineering & Development Lead at
-        <a href="https://www.bigpicturemedical.com" class="text-blue-300"
+        I'm currently enjoying my role as Head of Product Engineering at
+        <a href="https://www.bigpicturemedical.com" class="text-gray-300"
           >Big Picture Medical</a
-        >, a medical technology company striving to set the global standard in
-        the delivery of specialist quality care.
+        >, a med-tech company, where we are shaping
+        the future delivery of healthcare.
       </p>
-      <p class="md:text-xl mb-4">
-        Outside of this role, I'm involved in research and creative projects on
-        a consultancy basis, developing web platforms, mobile apps, and their
-        supporting infrastructures.
-      </p>
-      <!-- <p class="md:text-2xl mb-4">
-        Outside of this role, I'm involved in a range of healthcare research projects and creative projects as the co-founder of
-        <b>LittleFox Studios</b>.
-      </p>-->
       <p class="md:text-xl mb-6">
-        These commitments keep me quite busy, so I apologise if I'm slow to
+        My work commitments keep me quite busy, so I apologise if I'm slow to
         respond, but if you'd like to get in touch please don't hesitate to
         reach out for a chat.
       </p>
