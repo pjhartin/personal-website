@@ -1,10 +1,10 @@
 export const state = () => ({
-  activeBgColour: "antiquewhite",
+  activeBgColour: "#1b1b1b",
   bgColours: [
-    "antiquewhite",
-    "#e9967a",
+    // "antiquewhite",
+    // "#e9967a",
     "#00476b",
-    "#482b48",
+    // "#482b48",
     "#1b1b1b", // Near Black
     "rgb(39, 39, 108)", // Blue type,
     "#ffdb73"
