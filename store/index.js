@@ -1,13 +1,18 @@
 export const state = () => ({
-  activeBgColour: "#1b1b1b",
+  activeBgColour: "#778e90",
   bgColours: [
-    // "antiquewhite",
-    // "#e9967a",
+    "#af6f59",
+    "#b36060",
+    "#755e69",
+    "#9e8f64",
+    "#778e90",
     "#00476b",
-    // "#482b48",
-    "#1b1b1b", // Near Black
-    "rgb(39, 39, 108)", // Blue type,
-    "#ffdb73"
+    "#9e869e",
+    "#2c4e5f",
+    "#2c355f",
+    "#2c5f4c",
+    "#749689",
+    "#495692",
   ]
 });
 
