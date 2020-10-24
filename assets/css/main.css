@@ -58,8 +58,8 @@
   transition: all 350ms ease-in-out;
 }
 
-.blend-difference {
-  mix-blend-mode: difference;
+.blend-overlay {
+  mix-blend-mode: overlay;
 }
 
 /* Hovering effects  */

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="blend-difference h-full w-full flex content-center justify-center font-serif flex-col text-center"
+    class="blend-overlay h-full w-full flex content-center justify-center font-serif flex-col text-center"
   >
     <div class="container mx-auto md:w-2/3 lg:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <div

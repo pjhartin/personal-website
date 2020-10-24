@@ -1,6 +1,6 @@
 <template>
   <section
-    class="blend-difference min-h-screen w-full flex content-center justify-center font-serif flex-col text-center text-white"
+    class="blend-overlay min-h-screen w-full flex content-center justify-center font-serif flex-col text-center text-white"
   >
     <div class="container mx-auto md:w-1/2 pl-8 pr-8 mt-24 mb-12">
       <p class="md:text-xl mb-4">
@@ -10,7 +10,7 @@
       <p class="md:text-xl mb-4"></p>
       <p class="md:text-xl mb-4">
         I'm currently enjoying my role as Head of Product Engineering at
-        <a href="https://www.bigpicturemedical.com" class="text-gray-300"
+        <a href="https://www.bigpicturemedical.com" class="text-gray-400"
           >Big Picture Medical</a
         >, a med-tech company, where we are shaping
         the future delivery of healthcare.

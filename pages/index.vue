@@ -1,6 +1,6 @@
 <template>
   <section
-    class="h-screen w-screen flex content-center justify-center font-serif blend-difference"
+    class="h-screen w-screen flex content-center justify-center font-serif blend-overlay"
     @click="colourCycle"
   >
     <div class="shapes absolute inset-0 overflow-hidden">
@@ -44,7 +44,7 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  mix-blend-mode: difference;
+  mix-blend-mode: overlay;
 }
 
 .shape {
