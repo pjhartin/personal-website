@@ -1,124 +1,48 @@
 <template>
   <section
-    class="h-screen w-screen flex content-center justify-center font-serif blend-overlay"
-    @click="colourCycle"
+    class="blend-overlay min-h-screen w-full flex content-center justify-center font-serif flex-col text-center text-white"
   >
-    <div class="shapes absolute inset-0 overflow-hidden">
-      <div class="shape block"></div>
-      <div class="bouncing-ball-y">
-        <div class="bouncing-ball-x">
-          <div class="ball"></div>
-        </div>
-      </div>
-      <div class="header-container text-white self-center">
-        <h1
-          class="name text-6xl md:text-7xl flex flex-wrap align-bottom items-end w-full lg:w-2/3"
-        >
-          <span class="inline-flex mr-4">Phillip</span>
-          <span class="flex items-end">
-            Hartin
-            <span class="text-xl pb-4 md:pb-5 ml-2 whitespace-no-wrap"
-              >, PhD</span
-            >
-          </span>
-        </h1>
-      </div>
+    <div class="container mx-auto md:w-1/2 pl-8 pr-8 mt-24 mb-12">
+      <p class="md:text-xl mb-4">
+        Thanks for visiting my little slice
+        of the internet.
+      </p>
+      <p class="md:text-xl mb-4"></p>
+      <p class="md:text-xl mb-4">
+        I'm currently enjoying my role as Head of Product Engineering at
+        <a href="https://www.bigpicturemedical.com" class="text-gray-400"
+          >Big Picture Medical</a
+        >, a med-tech company, where we are shaping
+        the future delivery of healthcare.
+      </p>
+      <p class="md:text-xl mb-6">
+        My work commitments keep me quite busy, so I apologise if I'm slow to
+        respond, but if you'd like to get in touch please don't hesitate to
+        reach out for a chat.
+      </p>
+
+      <a class="text-lg mx-2" href="mailto:contact@philliphartin.com">
+        <font-awesome-icon :icon="['fas', 'inbox']"></font-awesome-icon>
+      </a>
+
+      <a class="text-lg mx-2" href="https://www.linkedin.com/in/philliphartin/">
+        <font-awesome-icon :icon="['fab', 'linkedin-in']"></font-awesome-icon>
+      </a>
+
+      <a class="text-lg mx-2" href="https://twitter.com/philliphartin">
+        <font-awesome-icon :icon="['fab', 'twitter']"></font-awesome-icon>
+      </a>
     </div>
   </section>
 </template>
+
 <script>
-import { mapActions, mapState, mapGetters } from "vuex";
-import styleMixin from "./../mixin/style-mixin";
+import styleMixin from './../mixin/style-mixin'
+
 export default {
   mixins: [styleMixin],
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
-
-<style>
-.header-container {
-  position: absolute;
-  background: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: overlay;
-}
-
-.shape {
-  position: absolute;
-  top: 45%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: multiply;
-  width: 400px;
-  height: 250px;
-}
-
-.ball {
-  background: #eee;
-  mix-blend-mode: exclusion;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-.bouncing-ball-y {
-  position: absolute;
-  width: 100%;
-  height: calc(100%);
-  animation-name: bounce;
-  animation-iteration-count: infinite;
-  animation-duration: 1200ms;
-}
-
-.bouncing-ball-x {
-  position: absolute;
-  animation-name: travel;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 1s;
-  /* TODO: Make 1s on mobile */
-}
-
-@screen md {
-  .bouncing-ball-x {
-    animation-duration: 2s;
-  }
-}
-
-@screen lg {
-  .bouncing-ball-x {
-    animation-duration: 4.8s;
-  }
-}
-
-.block {
-  background: #ffe2e2;
-  opacity: 0.1;
-}
-
-@keyframes travel {
-  from {
-    left: 0px;
-  }
-  to {
-    left: calc(100% - 100px);
-  }
-}
-
-@keyframes bounce {
-  from,
-  to {
-    top: 120px;
-    animation-timing-function: ease-in;
-  }
-  50% {
-    top: calc(50% + 25px);
-    animation-timing-function: ease-out;
-  }
-}
-</style>

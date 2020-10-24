@@ -22,9 +22,9 @@
 
       <nuxt-link
         v-on:click.native="colourCycle"
-        to="/about"
+        to="/bounce-experiment"
         class="link z-50 blend-overlay text-white hover:text-grey-darkest font-bold font-sans text-sm tracking-extrawide no-underline fixed bottom-0 right-0 md:pr-12 pr-8 pb-8 uppercase print:invisible"
-      >About</nuxt-link>
+      >🔬</nuxt-link>
       <!--
       <a
         v-on:click.native="colourCycle"
